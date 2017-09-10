@@ -126,6 +126,7 @@ void Shader::checkCompileErrors(GLuint object, std::string type)
 		glGetProgramiv(object, GL_LINK_STATUS, &success);
 		if (!success)
 		{
+			//如果没有成功记录错误日志
 			glGetProgramInfoLog(object, 1024, NULL, infoLog);
 			std::cout << "| ERROR::Shader: Link-time error: Type: " << type << "\n"
 				<< infoLog << "\n -- --------------------------------------------------- -- "

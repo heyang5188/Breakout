@@ -11,6 +11,7 @@ const unsigned int SCR_HEIGHT = 600;
 
 using namespace std;
 int main() {
+	//glfw≥ı ºªØ
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);

@@ -19,7 +19,7 @@ public:
 	Shader & use();
 	//着色器编译
 	void Compile(const GLchar *vertexSorce, const GLchar *fragmentSource, const GLchar *geometrySource = nullptr);
-
+	//Uniform的数值设置
 	void    SetFloat(const GLchar *name, GLfloat value, GLboolean useShader = false);
 	void    SetInteger(const GLchar *name, GLint value, GLboolean useShader = false);
 	void    SetVector2f(const GLchar *name, GLfloat x, GLfloat y, GLboolean useShader = false);
