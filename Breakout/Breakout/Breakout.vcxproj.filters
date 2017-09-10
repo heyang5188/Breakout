@@ -42,6 +42,12 @@
     <ClCompile Include="texture.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLevel.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -65,6 +71,9 @@
     <ClInclude Include="texture.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="GameLevel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="sprite.vs">
@@ -76,6 +85,12 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="awesomeface.png">
+      <Filter>源文件\image</Filter>
+    </Image>
+    <Image Include="block.png">
+      <Filter>源文件\image</Filter>
+    </Image>
+    <Image Include="block_solid.png">
       <Filter>源文件\image</Filter>
     </Image>
   </ItemGroup>
