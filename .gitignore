@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
 *.opendb
+/.vs/
+/Debug/
 
 # Compiled Object files
 *.slo
