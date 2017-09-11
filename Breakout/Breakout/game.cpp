@@ -1,6 +1,7 @@
 #include "game.h"
 #include "SpriteRenderer.h"
 #include "ResourceManager.h"
+#include <iostream>
 
 
 SpriteRenderer  *Renderer;
@@ -55,5 +56,14 @@ void Game::Update(GLfloat dt)
 
 void Game::Render()
 {
-	Renderer->DrawSprite(ResourceManager::GetTexture("face"), glm::vec2(200, 200), glm::vec2(300, 400), 45.0f, glm::vec3(0.0f, 1.0f, 0.0f));
+	if (this->State == GAME_ACTIVE)
+	{
+		// Draw background
+		Renderer->DrawSprite(ResourceManager::GetTexture("background"),
+			glm::vec2(0, 0), glm::vec2(this->Width, this->Height), 0.0f
+		);
+		// Draw level
+		
+		this->Levels[this->Level].Draw(*Renderer);
+	}
 }

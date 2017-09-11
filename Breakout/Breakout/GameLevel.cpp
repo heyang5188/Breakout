@@ -1,10 +1,13 @@
 #include "GameLevel.h"
 #include <fstream>
 #include <sstream>
+#include <iostream>
 
 void GameLevel::Load(const GLchar * file, GLuint levelWidth, GLuint levelHeight)
 {
+	// Clear old data
 	this->Bricks.clear();
+	// Load from file
 	GLuint tileCode;
 	GameLevel level;
 	std::string line;
@@ -12,7 +15,7 @@ void GameLevel::Load(const GLchar * file, GLuint levelWidth, GLuint levelHeight)
 	std::vector<std::vector<GLuint>> tileData;
 	if (fstream)
 	{
-		while (std::getline(fstream,line))
+		while (std::getline(fstream, line)) // Read each line from level file
 		{
 			std::istringstream sstream(line);
 			std::vector<GLuint> row;
@@ -20,16 +23,18 @@ void GameLevel::Load(const GLchar * file, GLuint levelWidth, GLuint levelHeight)
 				row.push_back(tileCode);
 			tileData.push_back(row);
 		}
-		if(tileData.size()>0)
+		if (tileData.size() > 0)
+			std::cout << "csifasd" << std::endl;
 			this->init(tileData, levelWidth, levelHeight);
 	}
 }
 
 void GameLevel::Draw(SpriteRenderer & renderer)
 {
-	for (auto &tile : this->Bricks)
-		if (!tile.Destroyed)
+	for (auto &tile : this->Bricks){	
+		if (!tile.Destroyed)		
 			tile.Draw(renderer);
+	}
 }
 
 GLboolean GameLevel::IsComplete()
@@ -70,6 +75,7 @@ void GameLevel::init(std::vector<std::vector<GLuint>> tileData, GLuint levelWidt
 					color = glm::vec3(1.0f, 0.5f, 0.0f);
 				glm::vec2 pos(unit_width * x, unit_height * y);
 				glm::vec2 size(unit_width, unit_height);
+				std::cout << "asdfsa" << std::endl;
 				this->Bricks.push_back(GameObject(pos, size, ResourceManager::GetTexture("block_solid"), color));
 			}
 		}
