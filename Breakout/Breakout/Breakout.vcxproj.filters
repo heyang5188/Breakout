@@ -48,6 +48,9 @@
     <ClCompile Include="GameLevel.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="BallObject.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -75,6 +78,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="BallObject.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
