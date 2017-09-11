@@ -2,7 +2,8 @@
 #define GAME_H
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-
+#include "GameLevel.h"
+#include <vector>
 enum GameState {
 	GAME_ACTIVE,
 	GAME_MENU,
@@ -16,6 +17,8 @@ public:
 	GameState              State;
 	GLboolean              Keys[1024];
 	GLuint                 Width, Height;
+	std::vector<GameLevel> Levels;
+	GLuint  Level;
 	// Constructor/Destructor
 	Game(GLuint width, GLuint height);
 	~Game();

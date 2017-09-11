@@ -131,6 +131,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="GameLevel.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="shader.h" />
     <ClInclude Include="SpriteRenderer.h" />
@@ -145,6 +146,9 @@
     <Image Include="awesomeface.png" />
     <Image Include="block.png" />
     <Image Include="block_solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Breakout.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
