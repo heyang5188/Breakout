@@ -24,6 +24,7 @@ void GameLevel::Load(const GLchar * file, GLuint levelWidth, GLuint levelHeight)
 			tileData.push_back(row);
 		}
 		if (tileData.size() > 0)
+			std::cout << "csifasd" << std::endl;
 			this->init(tileData, levelWidth, levelHeight);
 	}
 }
@@ -74,6 +75,7 @@ void GameLevel::init(std::vector<std::vector<GLuint>> tileData, GLuint levelWidt
 					color = glm::vec3(1.0f, 0.5f, 0.0f);
 				glm::vec2 pos(unit_width * x, unit_height * y);
 				glm::vec2 size(unit_width, unit_height);
+				std::cout << "asdfsa" << std::endl;
 				this->Bricks.push_back(GameObject(pos, size, ResourceManager::GetTexture("block_solid"), color));
 			}
 		}
