@@ -6,6 +6,9 @@
 #include <glm/gtc/type_ptr.hpp>
 #include "GameLevel.h"
 #include <vector>
+#include "SpriteRenderer.h"
+#include "ResourceManager.h"
+#include "BallObject.h"
 enum GameState {
 	GAME_ACTIVE,
 	GAME_MENU,
@@ -33,12 +36,21 @@ public:
 	// Constructor/Destructor
 	Game(GLuint width, GLuint height);
 	~Game();
+	
 	// Initialize game state (load all shaders/textures/levels)
 	void Init();
 	// GameLoop
 	void ProcessInput(GLfloat dt);
 	void Update(GLfloat dt);
 	void Render();
+	//game check
+	void DoCollisions();
+	GLboolean CheckCollision(BallObject &, GameObject &);
+	GLboolean CheckCollision(GameObject &, GameObject &);
+private:
+	GameObject *Player;
+	BallObject *Ball;
+	SpriteRenderer  *Renderer;
 };
 #endif // !GAME_H
 
