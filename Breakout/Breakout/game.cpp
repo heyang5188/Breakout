@@ -47,7 +47,7 @@ void Game::Init()
 	this->Levels.push_back(two);
 	this->Levels.push_back(three);
 	this->Levels.push_back(four);
-	this->Level = 1;
+	this->Level = 0;
 
 	//¶ÁÈ¡Ð¡Çò
 	glm::vec2 playerPos = glm::vec2(this->Width / 2 - PLAYER_SIZE.x / 2, this->Height - PLAYER_SIZE.y);
