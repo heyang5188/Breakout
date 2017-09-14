@@ -1,0 +1,19 @@
+#version 330 core
+layout (location = 0) in vec4 vertex;//<vec2 pos,vec2 texcoords>
+
+out vec2 TexCoords;
+out vec4 ParticleColor;
+
+uniform mat4 projection;
+uniform vec2 offset;
+uniform vec4 color;
+
+void main()
+{
+	//缩放值
+	float scale = 10.0f;
+	//纹理坐标
+	TexCoords = vertex.zw;
+	ParticleColor = color;
+	gl_Position = projection * vec4((vertex.xy * scale) + offset, 0.0, 1.0);
+}

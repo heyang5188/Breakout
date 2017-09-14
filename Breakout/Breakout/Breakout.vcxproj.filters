@@ -51,6 +51,9 @@
     <ClCompile Include="BallObject.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="particle_generator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -83,12 +86,21 @@
     <ClInclude Include="BallObject.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="particle_generator.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="sprite.vs">
       <Filter>源文件\shader</Filter>
     </None>
     <None Include="sprite.frag">
+      <Filter>源文件\shader</Filter>
+    </None>
+    <None Include="particle.vs">
+      <Filter>源文件\shader</Filter>
+    </None>
+    <None Include="particle.frag">
       <Filter>源文件\shader</Filter>
     </None>
   </ItemGroup>
@@ -100,6 +112,9 @@
       <Filter>源文件\image</Filter>
     </Image>
     <Image Include="block_solid.png">
+      <Filter>源文件\image</Filter>
+    </Image>
+    <Image Include="particle.png">
       <Filter>源文件\image</Filter>
     </Image>
   </ItemGroup>

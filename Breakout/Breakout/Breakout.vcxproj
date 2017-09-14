@@ -130,6 +130,7 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="particle_generator.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
@@ -140,6 +141,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="GameLevel.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="particle_generator.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="shader.h" />
@@ -148,6 +150,8 @@
     <ClInclude Include="texture.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="particle.frag" />
+    <None Include="particle.vs" />
     <None Include="sprite.frag" />
     <None Include="sprite.vs" />
   </ItemGroup>
@@ -155,6 +159,7 @@
     <Image Include="awesomeface.png" />
     <Image Include="block.png" />
     <Image Include="block_solid.png" />
+    <Image Include="particle.png" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Breakout.rc" />
