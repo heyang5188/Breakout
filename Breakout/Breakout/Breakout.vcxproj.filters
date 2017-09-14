@@ -54,6 +54,9 @@
     <ClCompile Include="particle_generator.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="post_processor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -89,6 +92,9 @@
     <ClInclude Include="particle_generator.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="post_processor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="sprite.vs">
@@ -101,6 +107,12 @@
       <Filter>源文件\shader</Filter>
     </None>
     <None Include="particle.frag">
+      <Filter>源文件\shader</Filter>
+    </None>
+    <None Include="post_processing.vs">
+      <Filter>源文件\shader</Filter>
+    </None>
+    <None Include="post_processing.frag">
       <Filter>源文件\shader</Filter>
     </None>
   </ItemGroup>
