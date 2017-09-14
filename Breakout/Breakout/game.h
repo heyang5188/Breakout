@@ -7,6 +7,7 @@
 #include <GLFW/glfw3.h>
 
 #include "GameLevel.h"
+#include "power_up.h"
 
 // Represents the current state of the game
 enum GameState {
@@ -34,9 +35,7 @@ const glm::vec2 INITIAL_BALL_VELOCITY(100.0f, -350.0f);
 // Radius of the ball object
 const GLfloat BALL_RADIUS = 12.5f;
 
-// Game holds all game-related state and functionality.
-// Combines all game-related data into a single class for
-// easy access to each of the components and manageability.
+
 class Game
 {
 public:
@@ -46,10 +45,11 @@ public:
 	GLuint                 Width, Height;
 	std::vector<GameLevel> Levels;
 	GLuint                 Level;
+	std::vector<PowerUp>  PowerUps;
 	// Constructor/Destructor
 	Game(GLuint width, GLuint height);
 	~Game();
-	// Initialize game state (load all shaders/textures/levels)
+
 	void Init();
 	// GameLoop
 	void ProcessInput(GLfloat dt);
@@ -59,6 +59,9 @@ public:
 	// Reset
 	void ResetLevel();
 	void ResetPlayer();
+	//µÀ¾ß
+	void SpawnPowerUps(GameObject &block);
+	void UpdatePowerUps(GLfloat dt);
 };
 
 #endif
