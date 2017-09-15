@@ -36,7 +36,7 @@ void GameLevel::Draw(SpriteRenderer & renderer)
 	}
 }
 
-GLboolean GameLevel::IsComplete()
+GLboolean GameLevel::IsCompleted()
 {
 	for (auto &tile : this->Bricks)
 		if (!tile.IsSolid && !tile.Destroyed)

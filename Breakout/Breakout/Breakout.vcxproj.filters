@@ -57,6 +57,9 @@
     <ClCompile Include="post_processor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="text_renderer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="shader.h">
@@ -98,6 +101,9 @@
     <ClInclude Include="power_up.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="text_renderer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="sprite.vs">
@@ -116,6 +122,12 @@
       <Filter>源文件\shader</Filter>
     </None>
     <None Include="post_processing.frag">
+      <Filter>源文件\shader</Filter>
+    </None>
+    <None Include="text.vs">
+      <Filter>源文件\shader</Filter>
+    </None>
+    <None Include="text.frag">
       <Filter>源文件\shader</Filter>
     </None>
   </ItemGroup>

@@ -84,7 +84,7 @@
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc140-mt.lib;irrKlang.lib;irrKlang.exp;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glfw3.lib;opengl32.lib;assimp-vc140-mt.lib;irrKlang.lib;irrKlang.exp;freetype240MT_D.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -136,6 +136,7 @@
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="SpriteRenderer.cpp" />
     <ClCompile Include="texture.cpp" />
+    <ClCompile Include="text_renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BallObject.h" />
@@ -151,6 +152,7 @@
     <ClInclude Include="SpriteRenderer.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="texture.h" />
+    <ClInclude Include="text_renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="particle.frag" />
@@ -159,6 +161,8 @@
     <None Include="post_processing.vs" />
     <None Include="sprite.frag" />
     <None Include="sprite.vs" />
+    <None Include="text.frag" />
+    <None Include="text.vs" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="awesomeface.png" />
